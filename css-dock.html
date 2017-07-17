@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Industry 4.0</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/dock.css" rel="stylesheet" type="text/css">
+        <link href="css/mycss.css" rel="stylesheet" type="text/css">
+        <link href="css/slide.css" rel="stylesheet" type="text/css">
+        <link href="css/aside.css" rel="stylesheet" type="text/css">
+        <script src="js/myscript.js"></script>
+    </head>
+    <body>
+
+
+        <!--top dock -->
+        <div class="dock" id="dock">
+            <div class="dock-container">
+                <a class="dock-item" href="#"><img src="png/tpremixing.png" alt="home"><span>Pre Mixing & Shifting</span></a>
+                <a class="dock-item" href="#"><img src="png/tgranulation.png" alt="contact"><span>Granulation</span></a>
+                <!-- <a class="dock-item" href="#"><img src="img/portfolio.png" alt="portfolio"><span>Portfolio</span></a>  -->
+                <a class="dock-item" href="#"><img src="png/tdrying.png" alt="music"><span>Drying</span></a>
+                <!-- <a class="dock-item" href="#"><img src="img/video.png" alt="video"><span>Video</span></a>  -->
+                <a class="dock-item" href="#"><img src="png/gBlend.png" alt="history"><span>Blending</span></a>
+                <!-- <a class="dock-item" href="#"><img src="img/calendar.png" alt="calendar"><span>Calendar</span></a> -->
+                <a class="dock-item" href="#"><img src="png/tpremixing.png" alt="rss"><span>Sifting and Milling</span></a>
+                <a class="dock-item" href="#"><img src="png/tlubricants.png" alt="rss"><span>Sifting of Lubricants</span></a>
+                <a class="dock-item" href="#"><img src="png/tcompress.png" alt="rss"><span>Compression</span></a>
+            </div>
+        </div>
+<br><br>
+
+
+              <aside>
+                    <ul type="none">
+                        <li><button class="button1">Alarm</button></li>
+                        <li><button class="button2">Setpoint</button></li>
+                        <li><button class="button3">Setpoint</button></li>
+                        <li><button class="button4">Call</button></li>
+                        <li><button class="button5">Emergency</button></li>
+                        <li><button class="button6">Shutdown</button></li>
+                    </ul>
+              </aside>
+
+
+        <!--  start of the four dials    -->
+        <table>
+          <tr>
+            <td>
+              <h2 class="parameter">Boiler Temperature</h2>
+                <div class="wrap">
+                      <div>
+                      <img src="png/dial.png" width="300" height="150" id="img1">
+                      <h1 class="text_over_image" id="value1">0</h1>
+                      </div>
+                </div>
+                <p>Stream Flow Rate (m^3/s)</p>
+                <div id="slider">
+                0 <input id="slide1" type="range"
+                 min="0" max="1000" step="5" value="700"
+                 onchange="updateSlider1(this.value)" />
+                 1000
+                </div>
+              </td>
+              <td>
+                <h2 class="parameter">Boiler Pressure</h2>
+                <div class="wrap">
+                      <div>
+                      <img src="png/dial.png" width="300" height="150"  id="img2"/>
+                      <h1 class="text_over_image" id="value2">0 </h1>
+                      </div>
+                <p>Valve Opening Width (m^3/s)</p>
+                </div>
+                <div id="slider">
+                0 <input id="slide2" type="range"
+                 min="0" max="1000" step="5" value="700"
+                 onchange="updateSlider3(this.value)" />
+                 1000
+                </div>
+                  </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <h2 class="parameter">Motor Speed</h2>
+                  <div class="wrap">
+                        <div>
+                        <img src="png/dial.png" width="300" height="150"  id="img3">
+                        <h1 class="text_over_image" id="value3">0</h1>
+                        </div>
+                  </div>
+                  <p>Time (Seconds)</p>
+                  <div id="slider">
+                  0 <input id="slide3" type="range"
+                   min="0" max="1000" step="5" value="700"
+                   onchange="updateSlider5(this.value)" />
+                   1000
+                  </div>
+                  </td>
+                  <td>
+                    <h2 class="parameter">Station Voltage</h2>
+                    <div class="wrap">
+                          <div>
+                          <img src="png/dial.png" width="300" height="150"  id="img4">
+                          <h1 class="text_over_image" id="value4">0</h1>
+                          </div>
+                    </div>
+                    <p>Station load(M ohm)</p>
+                    <div id="slider">
+                    0 <input id="slide4" type="range"
+                     min="0" max="1000" step="5" value="700"
+                     onchange="updateSlider7(this.value)" />
+                     1000
+                    </div>
+                    </td>
+                  </tr>
+                </table>
+          <!--      ----end of table -->
+
+
+          <aside>
+
+          </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--bottom dock -->
+        <div class="dock" id="dock2">
+            <div class="dock-container2">
+                <a class="dock-item2" href="#"><span>Boiler Temperture</span><img src="png/temp-green.png" alt="home"></a>
+                <a class="dock-item2" href="#"><span>Boiler Pressure</span><img src="png/pressure-green.png" alt="contact"></a>
+                <a class="dock-item2" href="#"><span>Motor Speed</span><img src="png/motor-speed-green.png" alt="portfolio"></a>
+                <a class="dock-item2" href="#"><span>Station voltage</span><img src="png/station-voltage-green.png" alt="music"></a>
+                <!-- <a class="dock-item2" href="#"><span>Video</span><img src="img/video.png" alt="video"></a> -->
+                <!-- <a class="dock-item2" href="#"><span>History</span><img src="img/history.png" alt="history"></a> -->
+                <!-- <a class="dock-item2" href="#"><span>Calendar</span><img src="img/calendar.png" alt="calendar"></a> -->
+                <!-- <a class="dock-item2" href="#"><span>Links</span><img src="img/link.png" alt="links"></a> -->
+                <!-- <a class="dock-item2" href="#"><span>RSS</span><img src="img/rss.png" alt="rss"></a> -->
+                <!-- <a class="dock-item2" href="#"><span>RSS2</span><img src="img/rss2.png" alt="rss"></a> -->
+            </div>
+        </div>
+
+        <!--dock menu JS options -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/iutil.js"></script>
+        <script type="text/javascript" src="js/fisheye.js"></script>
+        <script type="text/javascript" src="js/slide.js"></script>
+        <script type="text/javascript">
+/* javascript to input name from the user */
+
+        //default page javascript
+            $(document).ready(
+            function()
+            {
+                $('#dock').Fisheye(
+                {
+                    maxWidth: 50,
+                    items: 'a',
+                    itemsText: 'span',
+                    container: '.dock-container',
+                    itemWidth: 40,
+                    proximity: 90,
+                    halign : 'center'
+                }
+            )
+                $('#dock2').Fisheye(
+                {
+                    maxWidth: 60,
+                    items: 'a',
+                    itemsText: 'span',
+                    container: '.dock-container2',
+                    itemWidth: 40,
+                    proximity: 80,
+                    alignment : 'left',
+                    valign: 'bottom',
+                    halign : 'center'
+                }
+            )
+            }
+        );
+        </script>
+    </body>
+</html>

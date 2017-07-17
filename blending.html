@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Industry 4.0</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/dock.css" rel="stylesheet" type="text/css">
+        <link href="css/mycss.css" rel="stylesheet" type="text/css">
+        <link href="css/slide.css" rel="stylesheet" type="text/css">
+        <link href="css/aside.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+      <!-- menu of the page -->
+      <nav>
+        <a href="#" onclick="topError()">Pre Mixing & Shifting</a>
+        <a href="#" onclick="topError()">Granulation</a>
+        <a href="#" onclick="topError()">Drying</a>
+        <a href="#" class = "active">Blending</a>
+        <a href="#" onclick="topError()">Sifting and Milling</a>
+        <a href="#" onclick="topError()">Sifting of Lubricants</a>
+        <a href="#" onclick="topError()">Compression</a>
+      </nav>
+
+
+
+
+              <aside>
+                    <ul type="none">
+                        <li><button class="button1" onclick="wrongPress()">Alarm</button></li>
+                        <li><button class="button2" onclick="wrongPress()">Setpoint</button></li>
+                        <li><button class="button3" onclick="wrongPress()">Reschedule</button></li>
+                        <li><button class="button4" onclick="wrongPress()">Call</button></li>
+                        <li><button class="button5" onclick="wrongPress()">Emergency</button></li>
+                        <li><button class="button6" onclick="wrongPress()">Shutdown</button></li>
+                    </ul>
+              </aside>
+
+
+        <!--  start of the four dials    -->
+        <table>
+          <tr>
+            <td>
+              <h2 class="parameter">Boiler Temperature</h2>
+                <div class="wrap">
+                      <div>
+                      <img src="png/dial.png" width="300" height="150" id="img1">
+                      <h1 class="text_over_image" id="value1">0</h1>
+                      </div>
+                </div>
+                <p>Stream Flow Rate (m^3/s)</p>
+                <div id="slider">
+                0 <input id="slide1" type="range"
+                 min="0" max="1000" step="5" value="700"
+                 onchange="updateSlider1(this.value)" />
+                 300
+                </div>
+              </td>
+              <td>
+                <h2 class="parameter">Boiler Pressure</h2>
+                <div class="wrap">
+                      <div>
+                      <img src="png/dial.png" width="300" height="150"  id="img2"/>
+                      <h1 class="text_over_image" id="value2">0 </h1>
+                      </div>
+                <p>Valve Opening Width (mm)</p>
+                </div>
+                <div id="slider">
+                0 <input id="slide2" type="range"
+                 min="0" max="1000" step="5" value="700"
+                 onchange="updateSlider3(this.value)" />
+                 1000
+                </div>
+                  </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <h2 class="parameter">Motor Speed</h2>
+                  <div class="wrap">
+                        <div>
+                        <img src="png/dial.png" width="300" height="150"  id="img3">
+                        <h1 class="text_over_image" id="value3">0</h1>
+                        </div>
+                  </div>
+                  <!-- <p>Time (Seconds)</p> -->
+                  <div id="slider">
+                  0 <input id="slide3" type="range"
+                   min="0" max="1000" step="5" value="700"
+                   onchange="updateSlider5(this.value)" />
+                   max
+                  </div>
+                  </td>
+                  <td>
+                    <h2 class="parameter">Station Voltage</h2>
+                    <div class="wrap">
+                          <div>
+                          <img src="png/dial.png" width="300" height="150"  id="img4">
+                          <h1 class="text_over_image" id="value4">0</h1>
+                          </div>
+                    </div>
+                    <p>Station load(M ohm)</p>
+                    <div id="slider">
+                    0 <input id="slide4" type="range"
+                     min="0" max="1000" step="5" value="700"
+                     onchange="updateSlider7(this.value)" />
+                     2000
+                    </div>
+                    </td>
+                  </tr>
+                </table>
+          <!--      ----end of table -->
+
+        <!--bottom dock -->
+        <div class="end">
+                <a href="#" onclick="message1()">Boiler Temperture</a>
+                <a href="#" onclick="message2()">Boiler Pressure</a>
+                <a href="#" onclick="message3()">Motor Speed</a>
+                <a href="#" onclick="message4()">Station voltage</a>
+        </div>
+        <!-- <script>
+            window.location.hash="no-back-button";
+            window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
+            window.onhashchange=function(){window.location.hash="no-back-button";}
+        </script> -->
+        <!--dock menu JS options -->
+        <script src="js/myscript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/iutil.js"></script>
+        <script type="text/javascript" src="js/fisheye.js"></script>
+        <script type="text/javascript" src="js/slide.js"></script>
+    </body>
+</html>

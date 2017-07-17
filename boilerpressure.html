@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Industry 4.0</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/dock.css" rel="stylesheet" type="text/css">
+        <link href="css/mycss.css" rel="stylesheet" type="text/css">
+        <link href="css/slide.css" rel="stylesheet" type="text/css">
+        <link href="css/aside.css" rel="stylesheet" type="text/css">
+        <script src="js/myscript.js"></script>
+    </head>
+    <body>
+
+      <!-- menu of the page -->
+      <nav>
+        <a href="premixing.html">Pre Mixing & Shifting</a>
+        <a href="Granulation.html">Granulation</a>
+        <a href="drying.html" >Drying</a>
+        <a href="blending.html" class = "active">Blending</a>
+        <a href="milling.html">Sifting and Milling</a>
+        <a href="lubricants.html">Sifting of Lubricants</a>
+        <a href="compression.html">Compression</a>
+      </nav>
+
+
+
+
+              <aside>
+                    <ul type="none">
+                        <li><button class="button1">Alarm</button></li>
+                        <li><button class="button2">Setpoint</button></li>
+                        <li><button class="button3">Reschedule</button></li>
+                        <li><button class="button4">Call</button></li>
+                        <li><button class="button5">Emergency</button></li>
+                        <li><button class="button6">Shutdown</button></li>
+                    </ul>
+              </aside>
+
+
+        <!--  start of the four dials    -->
+        <table>
+          <tr>
+            <td>
+              <h2 class="parameter">Boiler Pressure</h2>
+                <div class="wrap">
+                      <div>
+                      <img src="png/dial.png" width="300" height="150" id="img1">
+                      <h1 class="text_over_image" id="value1">0</h1>
+                      </div>
+                </div>
+                <p>Valve Opening Width (m^3/s)</p>
+                <div id="slider">
+                0 <input id="slide1" type="range"
+                 min="0" max="1000" step="5" value="700"
+                 onchange="updateSlider1(this.value)" />
+                 1000
+                </div>
+              </td>
+              <td>
+                <img src="img/boiler.png" width="100%">
+                <img src="img/graph.png" width="100%">
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  <ul style="color:white">
+                    <li>Average feed rate of last 2 hours: 128 m3/sec</li>
+
+                    <li>Last chemical level recorded: 8241 mm
+
+                    <li>Noise level: 108 dB
+
+                    <li>Vibration: 20.3 Hz
+
+                    <li>Current flow rate for INPUT material: 150 m3/sec
+
+                    <li>Current flow rate for OUTPUT material: 300 m3/sec
+
+                    <li>Optimum pressure calculated for boiler is 60 Pa
+                  </ul>
+                </td>
+
+                <td>
+                  <ul style="color:white">
+                    <li>For stable boiler pressure, you should lower down the flow rate of the input and output materials. Control immediately the valve opening width (mm).
+
+                    <li>Keep valve opening such that the ratio of flow rate for input become 1/4 th of output flow rate.Try to keep pressure to an optimum level (60Pa).
+                    <li>Level sensors are not functioning, inform maintenance engineer to troubleshoot the level sensor errors.
+                    <li>Stop ‘milling phase’ machines for half an hour.
+                  </ul>
+
+                </td>
+              </tr>
+            </table>
+          <!--      ----end of table -->
+
+        <!--bottom dock -->
+        <div class="end">
+                <a href="boilertemp.html">Boiler Temperture</a>
+                <a href="boilerpressure.html">Boiler Pressure</a>
+                <a href="motorspeed.html">Motor Speed</a>
+                <a href="stationvoltage.html">Station voltage</a>
+        </div>
+
+        <!--dock menu JS options -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/iutil.js"></script>
+        <script type="text/javascript" src="js/fisheye.js"></script>
+        <script type="text/javascript" src="js/boiler.js"></script>
+        <script type="text/javascript">
+/* javascript to input name from the user */
+
+        //default page javascript
+            $(document).ready(
+            function()
+            {
+                $('#dock').Fisheye(
+                {
+                    maxWidth: 50,
+                    items: 'a',
+                    itemsText: 'span',
+                    container: '.dock-container',
+                    itemWidth: 40,
+                    proximity: 90,
+                    halign : 'center'
+                }
+            )
+                $('#dock2').Fisheye(
+                {
+                    maxWidth: 60,
+                    items: 'a',
+                    itemsText: 'span',
+                    container: '.dock-container2',
+                    itemWidth: 40,
+                    proximity: 80,
+                    alignment : 'left',
+                    valign: 'bottom',
+                    halign : 'center'
+                }
+            )
+            }
+        );
+        </script>
+    </body>
+</html>

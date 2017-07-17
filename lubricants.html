@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Industry 4.0</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/dock.css" rel="stylesheet" type="text/css">
+        <link href="css/mycss.css" rel="stylesheet" type="text/css">
+        <link href="css/slide.css" rel="stylesheet" type="text/css">
+        <link href="css/aside.css" rel="stylesheet" type="text/css">
+        <script src="js/myscript.js"></script>
+    </head>
+    <body>
+
+      <!-- menu of the page -->
+      <nav>
+        <a href="premixing.html">Pre Mixing & Shifting</a>
+        <a href="Granulation.html" >Granulation</a>
+        <a href="drying.html">Drying</a>
+        <a href="blending.html">Blending</a>
+        <a href="milling.html">Sifting and Milling</a>
+        <a href="lubricants.html" class = "active">Sifting of Lubricants</a>
+        <a href="compression.html">Compression</a>
+      </nav>
+
+
+
+
+              <aside>
+                    <ul type="none">
+                        <li><button class="button1">Alarm</button></li>
+                        <li><button class="button2">Setpoint</button></li>
+                        <li><button class="button3">Reschedule</button></li>
+                        <li><button class="button4">Call</button></li>
+                        <li><button class="button5">Emergency</button></li>
+                        <li><button class="button6">Shutdown</button></li>
+                    </ul>
+              </aside>
+
+
+        <!--  start of the four dials    -->
+        <table>
+          <tr>
+            <td>
+              <h2 class="parameter">Pressure</h2>
+                <div class="wrap">
+                      <div>
+                      <img src="png/dial.png" width="300" height="150" id="img1">
+                      <h1 class="text_over_image" id="value1">57</h1>
+                      </div>
+                </div>
+                <!-- <p>Stream Flow Rate (m^3/s)</p> -->
+                <div id="slider">
+                0 <input id="slide1" type="range"
+                 min="0" max="1000" step="5" value="700"
+                 onchange="updateSlider1(this.value)" />
+                 1000
+                </div>
+              </td>
+              <td>
+                <h2 class="parameter">Flowrate</h2>
+                <div class="wrap">
+                      <div>
+                      <img src="png/dial.png" width="300" height="150"  id="img2"/>
+                      <h1 class="text_over_image" id="value2">62</h1>
+                      </div>
+                <!-- <p>Valve Opening Width (m^3/s)</p> -->
+                </div>
+                <div id="slider">
+                0 <input id="slide2" type="range"
+                 min="0" max="1000" step="5" value="700"
+                 onchange="updateSlider3(this.value)" />
+                 1000
+                </div>
+                  </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <h2 class="parameter">Viscocity</h2>
+                  <div class="wrap">
+                        <div>
+                        <img src="png/dial.png" width="300" height="150"  id="img3">
+                        <h1 class="text_over_image" id="value3">32</h1>
+                        </div>
+                  </div>
+                  <!-- <p>Time (Seconds)</p> -->
+                  <div id="slider">
+                  0 <input id="slide3" type="range"
+                   min="0" max="1000" step="5" value="700"
+                   onchange="updateSlider5(this.value)" />
+                   1000
+                  </div>
+                  </td>
+                  <td>
+                    <h2 class="parameter">Binder molarity</h2>
+                    <div class="wrap">
+                          <div>
+                          <img src="png/dial.png" width="300" height="150"  id="img4">
+                          <h1 class="text_over_image" id="value4">29</h1>
+                          </div>
+                    </div>
+                    <!-- <p>Station load(M ohm)</p> -->
+                    <div id="slider">
+                    0 <input id="slide4" type="range"
+                     min="0" max="1000" step="5" value="700"
+                     onchange="updateSlider7(this.value)" />
+                     1000
+                    </div>
+                    </td>
+                  </tr>
+                </table>
+          <!--      ----end of table -->
+
+        <!--bottom dock -->
+        <div class="end">
+                <a href="#">Pressure</a>
+                <a href="#">Flowrate</a>
+                <a href="#">Viscocity</a>
+                <a href="#">Binder molarity</a>
+        </div>
+    </body>
+</html>

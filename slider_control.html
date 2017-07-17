@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A single Dial</title>
+  <style>
+  .wrap {
+    width: 1060px;
+    height:auto;
+    margin: auto;
+    text-align:center;
+    position:relative;
+}
+.text_over_image {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    color:#fff;
+    width:50px;
+    height:30px;
+}
+#value1{
+  -webkit-appearance: none;
+  padding-left:2px; padding-right:2px;
+  -webkit-border-radius: 5px;
+  background-image: -webkit-linear-gradient(top, #000000, #333333, #000000);
+}
+#slider{
+  border-radius:10px;
+  width:200px;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-image: -webkit-linear-gradient(top, #cccccc, #330000);
+  background-image: -o-linear-gradient(top, #cccccc, #330000);
+  background-image: -moz-linear-gradient(top, #cccccc, #330000);
+  text-align:center;
+  color:#ffffff;
+  font-weight:bold; font-size:large;
+  margin-left:auto;
+  margin-right: auto;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+        <div>
+        <img src="png/dial.png" width="400" height="200">
+        <h1 class="text_over_image" id="value1">0</h1>
+        </div>
+  </div>
+<div id="slider">
+  0 <input id="slide" type="range"
+   min="0" max="1000" step="5" value="700"
+   onchange="updateSlider1(this.value)" />
+   1000
+  </div>
+
+  <script>
+//code for the file
+    // set fso = CreateObject("Scripting.FileSystemObject");
+    // set s = fso.CreateTextFile("C:\test.txt", True);
+    // s.writeline("HI");
+    // s.writeline("Bye");
+    // s.writeline("-----------------------------");
+    // s.Close();
+    //end of code of file except for file close and writing to the file
+
+
+
+    var missChance=0;
+    var wrongAttempt=0;
+    var count=0;
+    var value=0;
+    function increase()
+    {
+        value++;
+        document.getElementById('value1').innerHTML=value;
+
+        if(value>80)
+        {
+          updateSlider2();
+          missChance++;
+        }
+        //console.log(value);
+    }
+    function decrease()
+    {
+      value--;
+      document.getElementById('value1').innerHTML=value;
+      //console.log(value);
+
+    }
+    //setTimeout(increase,1000);
+    //setTimeout(increase,2000);
+
+    var inc=0;
+
+    function start()
+    {
+      //count++;
+      while(inc<500)
+      {
+        //value++;
+        inc++;
+        var delay;
+        delay=inc*500;
+        console.log(delay);
+        setTimeout(increase,delay);
+
+        //document.getElementById('value1').innerHTML=value;
+      }
+      inc=0;
+    }
+    start();
+    function updateSlider1(v)
+    {
+      if(value>=60)
+      {
+          for(var i=0;i<70;i++)
+          {
+            var delay;
+            delay=i*100;
+            setTimeout(decrease,delay);
+          }
+      }
+      else
+      {
+        wrongAttempt++;
+      }
+      //start();
+    }
+    function updateSlider2()
+    {
+      for(var i=0;i<90;i++)
+          {
+            var delay;
+            delay=i*100;
+            setTimeout(decrease,delay);
+          }
+      //start();
+    }
+
+//code for closing of the file
+//fh.WriteLine(missChance);
+//fh.WriteLine(wrongAttempt);
+</script>
+<!-- // fh.Close(); -->
+</body>
+</html>
