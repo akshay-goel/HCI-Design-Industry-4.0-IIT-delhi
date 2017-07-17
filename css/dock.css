@@ -1,0 +1,38 @@
+/*for navigation bar */
+nav a{
+    display: inline-block;
+    width:12%;
+    margin: 1%;
+    padding:1% 0%;
+    background:rgba(255,255,255,0.3);
+    border: 3%;
+    border-radius: 3%;
+    color: #000000;
+    text-decoration: none;
+    font-size: 120%;
+    text-align: center;
+}
+nav a:hover{
+    background:rgba(255,255,255,0.7);
+}
+
+.end a{
+    display: inline-block;
+    width:22%;
+    margin: 1%;
+    padding:1% 0%;
+    background:rgba(255,255,255,0.3);
+    border: 3%;
+    border-radius: 3%;
+    color: #000000;
+    text-decoration: none;
+    font-size: 120%;
+    text-align: center;
+}
+.end a:hover{
+
+    background:rgba(255,255,255,0.7);
+}
+.active{
+    background: #ffffff;
+}

@@ -1,0 +1,116 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin:0;
+}
+body{
+  background-image: url("../img/back2.png");
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+table{
+  padding: 20px;
+  margin: 0px;
+  margin-left: 20%;
+  margin-top: 0%;
+  height:500px;
+  width: 700px;
+}
+td,tr{
+  padding: 15px;
+  margin:0px;
+  background-image: -webkit-linear-gradient(top, #000000, #555555);
+  background-image: -o-linear-gradient(top, #cccccc, #330000);
+  background-image: -moz-linear-gradient(top, #cccccc, #330000);
+}
+h2
+{
+  color:white;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color:white;
+  margin-bottom:5px;
+}
+#chosen1 {
+border-radius:10px;
+width:45px;
+padding-top:10px; padding-bottom:10px;
+background-image: -webkit-linear-gradient(top, #cccccc, #330000);
+background-image: -o-linear-gradient(top, #cccccc, #330000);
+background-image: -moz-linear-gradient(top, #cccccc, #330000);
+text-align:center;
+color:#ffffff;
+font-weight:bold; font-size:large;
+margin-left:40px;
+
+}
+#chosen2 {
+border-radius:10px;
+width:45px;
+padding-top:10px; padding-bottom:10px;
+background-image: -webkit-linear-gradient(top, #cccccc, #330000);
+background-image: -o-linear-gradient(top, #cccccc, #330000);
+background-image: -moz-linear-gradient(top, #cccccc, #330000);
+text-align:center;
+color:#ffffff;
+font-weight:bold; font-size:large;
+margin-left:40px;
+
+}
+#chosen3 {
+border-radius:10px;
+width:45px;
+padding-top:10px; padding-bottom:10px;
+background-image: -webkit-linear-gradient(top, #cccccc, #330000);
+background-image: -o-linear-gradient(top, #cccccc, #330000);
+background-image: -moz-linear-gradient(top, #cccccc, #330000);
+text-align:center;
+color:#ffffff;
+font-weight:bold; font-size:large;
+margin-left:40px;
+
+}
+#chosen4 {
+border-radius:10px;
+width:45px;
+padding-top:10px; padding-bottom:10px;
+background-image: -webkit-linear-gradient(top, #cccccc, #330000);
+background-image: -o-linear-gradient(top, #cccccc, #330000);
+background-image: -moz-linear-gradient(top, #cccccc, #330000);
+text-align:center;
+color:#ffffff;
+font-weight:bold; font-size:large;
+margin-left:40px;
+
+}
+#slider {
+margin-left:10px;
+}
+#slide{
+  height:5%;
+  width:30%;
+}
+#picHolder {
+width:13%;
+height:13%;
+margin:10px;
+}
+#pic {
+  width:200%;
+  height:200%;
+  margin:-10px;
+}
+input[type='range'] {
+-webkit-appearance: none;
+padding-left:2px; padding-right:2px;
+-webkit-border-radius: 5px;
+background-image: -webkit-linear-gradient(top, #000000, #333333, #000000);
+}
+#centre{
+  margin:3%;
+}
